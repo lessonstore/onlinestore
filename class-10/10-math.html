@@ -11,5 +11,31 @@
     <h1 class="text-3xl font-bold">Class 10 Mathematics</h1>
     <p class="mt-4 text-slate-700">Practice trigonometry, advanced algebra, and exam-style problems for Class 10.</p>
   </div>
-</body>
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+<a id="whatsapp-link" href="#" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Contact via WhatsApp" style="width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+</a>
+</div>
+
+<script>
+var title = document.title;
+var parts = title.split(' ');
+var message = '';
+if (title === 'Lesson Plan Store') {
+    message = 'Hi, I want to inquire about lesson plans on your website.';
+} else if (parts[0] === 'Class' && parts.length >= 2) {
+    var classNum = parts[1];
+    if (parts.length === 2) {
+        message = 'Hi, I want to inquire about subjects for Class ' + classNum + '.';
+    } else {
+        var subject = parts.slice(2).join(' ');
+        message = 'Hi, I want to inquire about ' + subject + ' for Class ' + classNum + '.';
+    }
+} else {
+    message = 'Hi, I have a question about your website.';
+}
+var phone = '923126450070';
+var url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+document.getElementById('whatsapp-link').href = url;
+</script></body>
 </html>
